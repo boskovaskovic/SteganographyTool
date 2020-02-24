@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" opacity="0.95" prefHeight="491.0" prefWidth="423.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginViewController">
+   <children>
+      <AnchorPane fx:id="topMenu" opacity="0.95" prefHeight="97.0" prefWidth="423.0" style="-fx-background-color: #262626;">
+         <children>
+            <ImageView fx:id="autenticationBtn" layoutX="43.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/newUser.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="powerBtn" layoutX="347.0" layoutY="25.0" onMouseReleased="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="infoAnchor" layoutY="102.0" opacity="0.95" prefHeight="491.0" prefWidth="423.0" style="-fx-background-color: #262626;" visible="false">
+         <children>
+            <Label layoutX="89.0" layoutY="61.0" text="Mrezno i distribuirano programiranje&#10;Bosko Vaskovic&#10;11149/16" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="registerAnchor" layoutY="102.0" opacity="0.95" prefHeight="491.0" prefWidth="423.0" style="-fx-background-color: #262626;" visible="false">
+         <children>
+            <JFXButton fx:id="registerUserBtn" layoutX="148.0" layoutY="419.0" prefHeight="31.0" prefWidth="127.0" style="-fx-border-radius: 5em; -fx-background-radius: 5em; -fx-background-color: #515D6D;" text="Register" textFill="WHITE" />
+            <JFXTextField fx:id="usernameField" focusColor="WHITE" layoutX="216.0" layoutY="43.0" prefHeight="29.0" prefWidth="169.0" promptText="username" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="surnameField" focusColor="WHITE" layoutX="216.0" layoutY="217.0" prefHeight="29.0" prefWidth="169.0" promptText="surname" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="nameField" focusColor="WHITE" layoutX="216.0" layoutY="162.0" prefHeight="29.0" prefWidth="169.0" promptText="name" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="dateOfBirthField" focusColor="WHITE" layoutX="216.0" layoutY="277.0" prefHeight="29.0" prefWidth="169.0" promptText="date of birth" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField fx:id="emailField" focusColor="WHITE" layoutX="216.0" layoutY="334.0" prefHeight="29.0" prefWidth="169.0" promptText="email" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <Label layoutX="42.0" layoutY="49.0" text="USERNAME" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="108.0" text="PASSWORD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="66.0" text="Choose your unique username" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="125.0" text="Make it strong" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" layoutX="145.0" layoutY="457.0" textFill="WHITE" />
+            <Label layoutX="43.0" layoutY="185.0" text="Tell us your name" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="170.0" text="NAME" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="232.0" text="SURNAME" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="247.0" text="Tell us your surname" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="307.0" text="Tell us your date of birth" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="292.0" text="BIRTHDAY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="372.0" text="Leave us your mail" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="355.0" text="EMAIL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="passwordField" focusColor="WHITE" layoutX="216.0" layoutY="102.0" promptText="password" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <Label fx:id="succeedLabelRegister" layoutX="182.0" layoutY="456.0" text="Succeed!" textFill="WHITE" visible="false" />
+            <Label fx:id="usernameTaken" layoutX="27.0" layoutY="457.0" text="That username is already taken. Choose different username!" textFill="#ff3c3c" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="autenticationAnchor" layoutY="102.0" opacity="0.95" prefHeight="491.0" prefWidth="423.0" style="-fx-background-color: #262626;">
+         <children>
+            <Label layoutX="78.0" layoutY="208.0" text="To use Steganography tool please log in:" textFill="WHITE" />
+            <ImageView layoutX="154.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/userBig2.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="usernameLoginField" alignment="TOP_CENTER" focusColor="WHITE" layoutX="120.0" layoutY="266.0" promptText="username" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <JFXButton fx:id="loginBtn" layoutX="141.0" layoutY="403.0" prefHeight="31.0" prefWidth="127.0" style="-fx-border-radius: 5em; -fx-background-radius: 5em; -fx-background-color: #515D6D;" text="Log in" textFill="WHITE" />
+            <JFXPasswordField fx:id="passwordLoginField" alignment="TOP_CENTER" focusColor="WHITE" layoutX="120.0" layoutY="330.0" promptText="password" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <Label fx:id="succeedLabel" layoutX="175.0" layoutY="456.0" text="Succeed!" textFill="WHITE" visible="false" />
+            <Label fx:id="failedLabel" layoutX="127.0" layoutY="456.0" text="Failed! Server is not up!" textFill="#ff3c3c" visible="false" />
+            <Label fx:id="failedLoginLabel" layoutX="81.0" layoutY="456.0" text="Failed, wrong username or password!" textFill="#ff3c3c" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
